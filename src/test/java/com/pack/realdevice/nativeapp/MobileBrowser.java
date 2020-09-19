@@ -7,6 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 
 import com.mobile.pack.MobileBrowserBase;
 
+import junit.framework.Assert;
+
 public class MobileBrowser extends MobileBrowserBase{
 
 	public static void main(String[] args) {
@@ -30,6 +32,8 @@ public class MobileBrowser extends MobileBrowserBase{
 			
 			boolean b = getDriver().findElementByXPath("//h4[text()='Top Stories']").getAttribute("class").contains("header");
 			System.out.println(b);
+			
+			Assert.assertEquals(true, b);
 			
 		} catch (MalformedURLException e) {
 			
